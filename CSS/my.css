@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+:root {
+    --pk-color:				#FFBAB3;
+    --blk-color:			#212121;
+}
+
+body {
+  background-color:	var(--pk-color); 
+  font-family: 'Poppins', 'sans-serif';
+  color: var(--blk-color);
+	margin:	6% 8% 0 8%;
+}
+
+@media (max-width: 1000px) {
+	.Foljoss {
+		padding-top: 17px;
+	}
+	.table-mob {
+		width: 100%;
+		font-size: 130%;
+	}
+}
+
+.poppins400 {
+	font-family: 'Poppins:400', 'sans-serif';
+}
+
+.bg-navbar {
+	background-color: var(--pk-color);
+}
+
+.button {
+    color:	rgb(0, 0, 0);
+    padding:	16px 32px;
+    text-align:	center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration:	0.4s;
+    cursor:	pointer;
+}
+  
+.button5 {
+    background-color: var(--pk-color);
+    color:	var(--blk-color);
+    border:	1px solid var(--blk-color);
+}
+  
+.button5:hover {
+    background-color:	var(--blk-color);
+    color:	rgb(61, 61, 61);
+}
+
+table {
+	border-collapse: separate;
+	border-spacing:	0;
+}
+
+td{
+  	word-wrap: break-word;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius:	15px;
+}
+
+table tr:last-child td:first-child {
+	border-bottom-left-radius:	15px;
+}
+
+table tr:first-child th:first-child {
+	border-top-left-radius:		15px;
+}
+
+table tr:first-child th:last-child {
+	border-top-right-radius:	15px;
+}
+
+h1{
+  font-size: 425%;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 250%;
+  font-weight: 600; 
+}
+
+h3{
+  font-size: 225%;
+  font-weight: 600;
+}
+
+p{
+  font-size: 170%;
+  font-weight: 700;
+}
+
+ul{
+  font-size: 170%;
+  font-weight: 700;
+}
+
+ol{
+  font-size: 170%;
+  font-weight: 700;
+}
+
+a{
+  font-size: 150%;
+  font-weight: 700;
+}
+
+.dot {
+	height:					14px;
+	width:					14px;
+	display:				inline-block;
+	border-color:			#212121;
+	border-width:			2px;
+	border-style:			solid;
+	border-radius:			50%;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box{
+  width: 30rem;
+  height: 20rem;
+}
+
+
+:root {
+  --bee-width: 200px;
+  --bee-height: 100px;
+  --bee-scale: 0.5;
+  --cube-scale: 0.5;
+  --bee-front: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/front.png");
+  --bee-back: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/back.png");
+  --bee-left: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/left.png");
+  --bee-right: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/right.png");
+  --bee-top: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/top.png");
+  --bee-bottom: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/bottom.png");
+  --bee-antenna: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/antenna.png");
+  --bee-wing: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/wing.png");
+  --bee-leg: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/leg.png");
+  --cube-sides: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/sides.jpg");
+  --cube-top: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/top.jpg");
+  --cube-bottom: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/bottom.jpg");
+  --rose: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/rose.png");
+  --grass: url("https://raw.githubusercontent.com/ifariat/3D-CSS-Minecraft-s-Bee/main/grass.png");
+}
+
+
+.scene {
+  perspective: 700px;
+  transform-style: preserve-3d;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bee {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top;
+  animation: shake 8s linear infinite;
+  bottom: -10px;
+}
+.bee_face {
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  filter: saturate(1.2);
+}
+.bee_face.top {
+  background: var(--bee-top) center / cover no-repeat;
+  transform: translateY(-100px) rotateX(90deg) rotateZ(90deg);
+  box-shadow: inset 0 0 70px 0px rgb(0 0 0 / 70%);
+}
+.bee_face.bottom {
+  background: var(--bee-bottom) center / cover no-repeat;
+  transform: translateY(100px) rotateX(90deg) rotateZ(90deg);
+  box-shadow: inset 0 0 70px 0px rgb(0 0 0 / 70%);
+}
+.bee_face.right {
+  background: var(--bee-right) center / cover no-repeat;
+  transform: translateX(100px) rotateY(90deg);
+  box-shadow: inset 0 0 70px 0px rgb(0 0 0 / 70%);
+}
+.bee_face.left {
+  background: var(--bee-left) center / cover no-repeat;
+  transform: translateX(-100px) rotateY(-90deg);
+  box-shadow: inset 0 0 70px 0px rgb(0 0 0 / 70%);
+}
+.bee_face.front {
+  background: var(--bee-front) center / contain no-repeat;
+  transform: translateZ(140px);
+  width: 200px;
+  height: 200px;
+}
+.bee_face.back {
+  background: var(--bee-back) center / cover no-repeat;
+  transform: translateZ(-140px) rotateY(-180deg);
+  width: 200px;
+  height: 200px;
+  box-shadow: inset 0 0 70px 0px rgb(0 0 0 / 70%);
+}
+.antenna {
+  position: absolute;
+  width: 70px;
+  height: 55px;
+  background: var(--bee-antenna) center / cover no-repeat;
+}
+.antenna_right {
+  transform: translate3d(50px, -71px, 170px) rotateY(90deg);
+}
+.antenna_left {
+  transform: translate3d(-50px, -71px, 170px) rotateY(90deg);
+}
+.leg {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  background: var(--bee-leg);
+  background-size: cover;
+}
+.leg_right_one {
+  transform: translate3d(50px, 125px, -30px) rotateX(-10deg);
+}
+.leg_right_two {
+  transform: translate3d(50px, 125px, 30px) rotateX(-10deg);
+}
+.leg_right_three {
+  transform: translate3d(50px, 125px, 90px) rotateX(-10deg);
+}
+.leg_left_one {
+  transform: translate3d(-50px, 125px, -30px) rotateX(-10deg);
+}
+.leg_left_two {
+  transform: translate3d(-50px, 125px, 30px) rotateX(-10deg);
+}
+.leg_left_three {
+  transform: translate3d(-50px, 125px, 90px) rotateX(-10deg);
+}
+.wing {
+  width: 300px;
+  height: 200px;
+}
+.wing_left {
+  background: var(--bee-wing) center / contain no-repeat;
+  transform-origin: top right;
+  transform: translate3d(-150px, -1px, 130px) rotateY(90deg) rotateX(90deg)
+    scale3d(-1, 1, 1);
+  animation: fly_left 120ms infinite linear;
+}
+.wing_right {
+  background: var(--bee-wing) center / contain no-repeat;
+  transform-origin: top left;
+  transform: translate3d(150px, -1px, -65px) rotateY(90deg) rotateX(90deg)
+    scale3d(-1, -1, 1);
+  animation: fly_right 120ms infinite linear;
+}
+
+.stinger {
+  width: 50px;
+  height: 30px;
+  background-color: #1d1d25;
+  transform: translateZ(-160px) rotateY(90deg);
+  position: absolute;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: translateY(-100px) rotateX(0deg) rotateY(0deg)
+      scale3d(var(--cube-scale), var(--cube-scale), var(--cube-scale));
+  }
+  50% {
+    transform: translateY(-100px) rotateX(0deg) rotateY(180deg)
+      scale3d(var(--cube-scale), var(--cube-scale), var(--cube-scale));
+  }
+  100% {
+    transform: translateY(-100px) rotateX(0deg) rotateY(360deg)
+      scale3d(var(--cube-scale), var(--cube-scale), var(--cube-scale));
+  }
+}
+@keyframes shake {
+  0% {
+    transform-origin: top;
+    transform: translateY(100px) rotateY(0) rotateX(0)
+      scale3d(var(--bee-scale), var(--bee-scale), var(--bee-scale));
+  }
+  50% {
+    transform-origin: top;
+    transform: translateY(120px) rotateY(180deg) rotateX(10deg)
+      scale3d(var(--bee-scale), var(--bee-scale), var(--bee-scale));
+  }
+  100% {
+    transform-origin: top;
+    transform: translateY(100px) rotateY(360deg) rotateX(0deg)
+      scale3d(var(--bee-scale), var(--bee-scale), var(--bee-scale));
+  }
+}
+@keyframes fly_right {
+  0% {
+    transform-origin: top left;
+    transform: translate3d(150px, -1px, -65px) rotateY(90deg) rotateX(90deg)
+      scale3d(-1, -1, 1);
+  }
+  50% {
+    transform-origin: top left;
+    transform: translate3d(150px, -1px, -65px) rotateY(90deg) rotateX(30deg)
+      scale3d(-1, -1, 1);
+  }
+  100% {
+    transform-origin: top left;
+    transform: translate3d(150px, -1px, -65px) rotateY(90deg) rotateX(90deg)
+      scale3d(-1, -1, 1);
+  }
+}
+@keyframes fly_left {
+  0% {
+    transform-origin: top right;
+    transform: translate3d(-150px, -1px, 130px) rotateY(90deg) rotateX(90deg)
+      scale3d(-1, 1, 1);
+  }
+  50% {
+    transform-origin: top right;
+    transform: translate3d(-150px, -1px, 130px) rotateY(90deg) rotateX(160deg)
+      scale3d(-1, 1, 1);
+  }
+  100% {
+    transform-origin: top right;
+    transform: translate3d(-150px, -1px, 130px) rotateY(90deg) rotateX(90deg)
+      scale3d(-1, 1, 1);
+  }
+}
+
+@media (max-height: 570px) {
+  .bee {
+    bottom: -140px;
+  }
+  .cube {
+    bottom: -100px;
+  }
+}
